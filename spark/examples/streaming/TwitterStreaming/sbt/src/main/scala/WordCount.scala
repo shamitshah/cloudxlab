@@ -4,9 +4,9 @@ import org.apache.spark.streaming._
 object WordCount {
     def main(args: Array[String]) {
         // Create a local StreamingContext with batch interval of 10 second
-        val conf = new SparkConf().setAppName("WordCount")
+        val conf = new SparkConf().setAppName("TwitterStreaming")
         val ssc = new StreamingContext(conf, Seconds(10))
-
+print("High this is Shamit");
         // Create a DStream that will connect to hostname:port, like localhost:9999
         val lines = ssc.socketTextStream("localhost", 9999)
 
